@@ -1,180 +1,255 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Movie Score IMDB</title>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://unpkg.com/onsenui/css/onsen-css-components.min.css"
     />
-    <style>
-      h1 {
-        color: white;
-        text-align: center;
-        background-color: red;
-        width: 400px;
-      }
-      .card {
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(66, 66, 66);
-        height: 470px;
-        padding: 5px;
-      }
-      .top10 {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-      }
-      html {
-        background-image: url("https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_1280.jpg");
-        background-size: contain;
-      }
-      a {
-        width: 200px;
-        color: white;
-        font-size: 16pt;
-      }
-      span,
-      i {
-        color: yellow;
-        font-size: 16pt;
-      }
-      .star {
-        display: flex;
-        flex-direction: row;
-      }
-      .space {
-        width: 5px;
-      }
-      button {
-        width: 80px;
-        height: 40px;
-        font-size: 14pt;
-        align-self: center;
-        border-radius: 20px;
-        border-color: blue;
-        background-color: rgb(38, 157, 255);
-        color: white;
-      }
-      .space_2 {
-        height: 15px;
-      }
-      .space_3 {
-        height: 5px;
-      }
-    </style>
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
   </head>
   <body>
-    <h1>Top 10 on IMDb this week</h1>
-    <div class="top10">
-      <div class="card">
-        <img
-          src="https://m.media-amazon.com/images/M/MV5BNjJkYTI1MjAtNTcxZC00YmU5LWExMDAtZTg3YzRhMDNmYmEwXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg"
-          width="200px"
-          height="300px"
-        />
-        <div class="space_3"></div>
-        <div class="star">
-          <i class="fa-solid fa-star"></i>
-          <div class="space"></div>
-          <span>8.3</span>
-        </div>
-        <a href="https://www.imdb.com/title/tt7767422/?ref_=hm_top_tt_t_1"
-          >1. Sex Education</a
+    <ons-page>
+      <ons-toolbar>
+        <div class="center">Top 10 on IMDb</div>
+      </ons-toolbar>
+
+      <ons-card>
+        <div
+          style="display: flex; flex-direction: row; justify-content: center"
         >
-        <div class="space_2"></div>
-        <button>Trailer</button>
-      </div>
-      <div class="card">
-        <img
-          src="https://m.media-amazon.com/images/M/MV5BMWM1NjU1MDgtYjhjYS00Mjg5LWE1MWEtNzUwNWMxNTU2ZWY3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
-          width="200px"
-          height="300px"
-        />
-        <div class="space_3"></div>
-        <div class="star">
-          <i class="fa-solid fa-star"></i>
-          <div class="space"></div>
-          <span>7.8</span>
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BNjJkYTI1MjAtNTcxZC00YmU5LWExMDAtZTg3YzRhMDNmYmEwXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg"
+            alt="Onsen UI"
+            style="width: auto; height: 250px"
+          />
         </div>
-        <a href="https://www.imdb.com/title/tt13622776/?ref_=hm_top_tt_t_2"
-          >2. Ahsoka</a
-        >
-        <div class="space_2"></div>
-        <button>Trailer</button>
-      </div>
-      <div class="card">
-        <img
-          src="https://m.media-amazon.com/images/M/MV5BZDk1MmI3YWEtMGE0MS00ZjFlLWIxMjgtMjc5MmRjOTZiMDc2XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
-          width="200px"
-          height="300px"
-        />
-        <div class="space_3"></div>
-        <div class="star">
-          <i class="fa-solid fa-star"></i>
-          <div class="space"></div>
-          <span>7.4</span>
+        <div class="title">
+          <div
+            style="display: flex; flex-direction: row; justify-content: center"
+          >
+            <ons-icon
+              style="color: rgba(255, 196, 0, 0.726)"
+              icon="fa-star"
+            ></ons-icon>
+            <div style="width: 3px"></div>
+            8.3
+          </div>
+          <div style="height: 7px"></div>
+          <div>1. Sex Education</div>
         </div>
-        <a href="https://www.imdb.com/title/tt6486762/?ref_=hm_top_tt_t_3"
-          >3. The Continental: From the World of John Wick</a
-        >
-        <div class="space_2"></div>
-        <button>Trailer</button>
-      </div>
-      <div class="card">
-        <img
-          src="https://m.media-amazon.com/images/M/MV5BNDUyNTIzNDQtYTZmMi00M2FlLTgyZjUtYWViZWNhMDYzMjE4XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg"
-          width="200px"
-          height="300px"
-        />
-        <div class="space_3"></div>
-        <div class="star">
-          <i class="fa-solid fa-star"></i>
-          <div class="space"></div>
-          <span>7.2</span>
+
+        <div class="content">
+          <p>
+            A teenage boy with a sex therapist mother teams up with a high
+            school classmate to set up an underground sex therapy clinic at
+            school.
+          </p>
+          <div>
+            <a href="https://youtu.be/WldgrH9SvbE"
+              ><ons-button><ons-icon icon="fa-youtube"></ons-icon></ons-button
+            ></a>
+            <a href="https://www.imdb.com/title/tt7767422/?ref_=hm_top_tt_t_1"
+              ><ons-button><ons-icon icon="fa-share"></ons-icon></ons-button
+            ></a>
+          </div>
         </div>
-        <a href="https://www.imdb.com/title/tt11858890/?ref_=hm_top_tt_t_4"
-          >4. The Creator</a
+      </ons-card>
+      <ons-card>
+        <div
+          style="display: flex; flex-direction: row; justify-content: center"
         >
-        <div class="space_2"></div>
-        <button>Trailer</button>
-      </div>
-      <div class="card">
-        <img
-          src="https://m.media-amazon.com/images/M/MV5BMGNhZDczNTUtOWEzZS00ZjEyLTkzODQtOGM1MTZiMGY2ODIyXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_UY1200_CR90,0,630,1200_AL_.jpg"
-          width="200px"
-          height="300px"
-        />
-        <div class="space_3"></div>
-        <div class="star">
-          <i class="fa-solid fa-star"></i>
-          <div class="space"></div>
-          <span>6.4</span>
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BMWM1NjU1MDgtYjhjYS00Mjg5LWE1MWEtNzUwNWMxNTU2ZWY3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+            alt="Onsen UI"
+            style="width: auto; height: 250px"
+          />
         </div>
-        <a href="https://www.imdb.com/title/tt14509110/?ref_=hm_top_tt_t_5"
-          >5. No One Will Save You</a
-        >
-        <div class="space_2"></div>
-        <button>Trailer</button>
-      </div>
-      <div class="card">
-        <img
-          src="https://m.media-amazon.com/images/M/MV5BMGYxOWMxNjMtNjE3Mi00YTRjLTlkZWUtNDk4NzBkMWEyYWE0XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg"
-          width="200px"
-          height="300px"
-        />
-        <div class="space_3"></div>
-        <div class="star">
-          <i class="fa-solid fa-star"></i>
-          <div class="space"></div>
-          <span>8.1</span>
+        <div class="title">
+          <div
+            style="display: flex; flex-direction: row; justify-content: center"
+          >
+            <ons-icon
+              style="color: rgba(255, 196, 0, 0.726)"
+              icon="fa-star"
+            ></ons-icon>
+            <div style="width: 3px"></div>
+            <span>7.8</span>
+
+          </div>
+          <div style="height: 7px"></div>
+          <div>2. Ahsoka</div>
         </div>
-        <a href="https://www.imdb.com/title/tt13159924/?ref_=hm_top_tt_t_6"
-          >6. Gen V</a
+
+        <div class="content">
+          <p>
+            After the fall of the Galactic Empire, former Jedi Knight Ahsoka Tano investigates an emerging threat to a vulnerable galaxy.
+          </p>
+          <div>
+            <a href="https://youtu.be/J_1EXWNETiI"
+              ><ons-button><ons-icon icon="fa-youtube"></ons-icon></ons-button
+            ></a>
+            <a href="https://www.imdb.com/title/tt13622776/?ref_=hm_top_tt_t_2"
+              ><ons-button><ons-icon icon="fa-share"></ons-icon></ons-button
+            ></a>
+          </div>
+        </div>
+      </ons-card>
+      <ons-card>
+        <div
+          style="display: flex; flex-direction: row; justify-content: center"
         >
-        <div class="space_2"></div>
-        <button>Trailer</button>
-      </div>
-    </div>
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BZDk1MmI3YWEtMGE0MS00ZjFlLWIxMjgtMjc5MmRjOTZiMDc2XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+            style="width: auto; height: 250px"
+          />
+        </div>
+        <div class="title">
+          <div
+            style="display: flex; flex-direction: row; justify-content: center"
+          >
+            <ons-icon
+              style="color: rgba(255, 196, 0, 0.726)"
+              icon="fa-star"
+            ></ons-icon>
+            <div style="width: 3px"></div>
+            7.4
+          </div>
+          <div style="height: 7px"></div>
+          <div>3. The Continental: From the World of John Wick</div>
+        </div>
+
+        <div class="content">
+          <p>
+            Set in 1970s New York City, The Continental explores the origin of the iconic hotel-for-assassins centerpiece of the John Wick universe seen through the eyes and action of a young Winston Scott.
+          </p>
+          <div>
+            <a href="https://youtu.be/y3FzXBkCUAg"
+              ><ons-button><ons-icon icon="fa-youtube"></ons-icon></ons-button
+            ></a>
+            <a href="https://www.imdb.com/title/tt6486762/?ref_=hm_top_tt_t_3"
+              ><ons-button><ons-icon icon="fa-share"></ons-icon></ons-button
+            ></a>
+          </div>
+        </div>
+      </ons-card>
+      <ons-card>
+        <div
+          style="display: flex; flex-direction: row; justify-content: center"
+        >
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BNDUyNTIzNDQtYTZmMi00M2FlLTgyZjUtYWViZWNhMDYzMjE4XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg"
+            alt="Onsen UI"
+            style="width: auto; height: 250px"
+          />
+        </div>
+        <div class="title">
+          <div
+            style="display: flex; flex-direction: row; justify-content: center"
+          >
+            <ons-icon
+              style="color: rgba(255, 196, 0, 0.726)"
+              icon="fa-star"
+            ></ons-icon>
+            <div style="width: 3px"></div>
+            8.3
+          </div>
+          <div style="height: 7px"></div>
+          <div>4. The Creator</div>
+        </div>
+
+        <div class="content">
+          <p>
+            Against the backdrop of a war between humans and robots with artificial intelligence, a former soldier finds the secret weapon, a robot in the form of a young child.
+          </p>
+          <div>
+            <a href="https://youtu.be/ex3C1-5Dhb8"
+              ><ons-button><ons-icon icon="fa-youtube"></ons-icon></ons-button
+            ></a>
+            <a href="https://www.imdb.com/title/tt11858890/?ref_=hm_top_tt_t_4"
+              ><ons-button><ons-icon icon="fa-share"></ons-icon></ons-button
+            ></a>
+          </div>
+        </div>
+      </ons-card>
+      <ons-card>
+        <div
+          style="display: flex; flex-direction: row; justify-content: center"
+        >
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BMGNhZDczNTUtOWEzZS00ZjEyLTkzODQtOGM1MTZiMGY2ODIyXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_UY1200_CR90,0,630,1200_AL_.jpg"
+            alt="Onsen UI"
+            style="width: auto; height: 250px"
+          />
+        </div>
+        <div class="title">
+          <div
+            style="display: flex; flex-direction: row; justify-content: center"
+          >
+            <ons-icon
+              style="color: rgba(255, 196, 0, 0.726)"
+              icon="fa-star"
+            ></ons-icon>
+            <div style="width: 3px"></div>
+            6.4
+          </div>
+          <div style="height: 7px"></div>
+          <div>5.  No One Will Save You</div>
+        </div>
+
+        <div class="content">
+          <p>
+            An exiled anxiety-ridden homebody must battle an alien who's found its way into her home.
+          </p>
+          <div>
+            <a href="https://youtu.be/vWGUWg8MCLo"
+              ><ons-button><ons-icon icon="fa-youtube"></ons-icon></ons-button
+            ></a>
+            <a href="https://www.imdb.com/title/tt14509110/?ref_=hm_top_tt_t_5"
+              ><ons-button><ons-icon icon="fa-share"></ons-icon></ons-button
+            ></a>
+          </div>
+        </div>
+      </ons-card>
+      <ons-card>
+        <div
+          style="display: flex; flex-direction: row; justify-content: center"
+        >
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BMGYxOWMxNjMtNjE3Mi00YTRjLTlkZWUtNDk4NzBkMWEyYWE0XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg"
+            alt="Onsen UI"
+            style="width: auto; height: 250px"
+          />
+        </div>
+        <div class="title">
+          <div
+            style="display: flex; flex-direction: row; justify-content: center"
+          >
+            <ons-icon
+              style="color: rgba(255, 196, 0, 0.726)"
+              icon="fa-star"
+            ></ons-icon>
+            <div style="width: 3px"></div>
+            8.3
+          </div>
+          <div style="height: 7px"></div>
+          <div>6. Gen V</div>
+        </div>
+
+        <div class="content">
+          <p>
+            From the world of "The Boys" comes "Gen V," which explores the first generation of superheroes to know that their super powers are from Compound V. These heroes put their physical and moral boundaries to the test competing for the school's top ranking.
+          </p>
+          <div>
+            <a href="https://youtu.be/bFrwyc-s2hg"
+              ><ons-button><ons-icon icon="fa-youtube"></ons-icon></ons-button
+            ></a>
+            <a href="https://www.imdb.com/title/tt13159924/?ref_=hm_top_tt_t_6"
+              ><ons-button><ons-icon icon="fa-share"></ons-icon></ons-button
+            ></a>
+          </div>
+        </div>
+      </ons-card>
+    </ons-page>
   </body>
 </html>
